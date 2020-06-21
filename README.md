@@ -1,7 +1,13 @@
 ## Share Space : A fun social platform to fight boredom .
-![Graphic](https://github.com/parthpanchal123/Share-Space/blob/master/Screenshots/SHARE%20SPACE.png)</br>
-![](https://img.shields.io/github/forks/parthpanchal123/Share-Space)
-![](https://img.shields.io/github/stars/parthpanchal123/Share-Space)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![](https://img.shields.io/github/forks/parthpanchal123/Share-Space) 
+![](https://img.shields.io/github/stars/parthpanchal123/Share-Space) 
+![](https://img.shields.io/github/issues/parthpanchal123/Share-Space) 
+![](https://img.shields.io/github/issues/parthpanchal123/Share-Space) 
+![](https://img.shields.io/badge/Made%20with-Flutter-blue)
+ 
+![Graphic](https://github.com/parthpanchal123/Share-Space/blob/master/Screenshots/SHARE%20SPACE.png)
 
 Share Space is a social app where you and your friends can suggest some interesting things to do in this quarantine like watching some film/series or reading an interesting book, listening to some good music or any other interesting activity .
 
