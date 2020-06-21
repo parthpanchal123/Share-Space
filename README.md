@@ -3,8 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![](https://img.shields.io/github/forks/parthpanchal123/Share-Space) 
 ![](https://img.shields.io/github/stars/parthpanchal123/Share-Space) 
-![](https://img.shields.io/github/issues/parthpanchal123/Share-Space) 
-![](https://img.shields.io/github/issues/parthpanchal123/Share-Space) 
+![](https://img.shields.io/github/issues/parthpanchal123/Share-Space)  
 ![](https://img.shields.io/badge/Made%20with-Flutter-blue)
  
 ![Graphic](https://github.com/parthpanchal123/Share-Space/blob/master/Screenshots/SHARE%20SPACE.png)
