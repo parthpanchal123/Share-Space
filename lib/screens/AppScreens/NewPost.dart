@@ -25,12 +25,24 @@ class _NewPostState extends State<NewPost> {
   bool isLoading = false;
   final focus = FocusNode();
   int tag = 9;
-  List<String> options = ['Books 📚 ', 'Series 🍿', 'Movies 🎬', 'Music 🎶', 'Writing ✍️', 'Technology 🖥️', 'Cars 🏎️', 'Food 🥘', 'Science 🔬', 'Random 🔀'];
+  List<String> options = [
+    'Books 📚 ',
+    'Series 🍿',
+    'Movies 🎬',
+    'Music 🎶',
+    'Writing ✍️',
+    'Technology 🖥️',
+    'Cars 🏎️',
+    'Food 🥘',
+    'Science 🔬',
+    'Random 🔀'
+  ];
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     final db = Provider.of<Database>(context);
-    final routes = ModalRoute.of(context).settings.arguments as Map<String, String>;
+    final routes =
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
     final String uid = routes['uid'];
 
     return Scaffold(
@@ -90,10 +102,14 @@ class _NewPostState extends State<NewPost> {
                         textInputAction: TextInputAction.next,
                         autofocus: false,
                         controller: detailController,
-                        hintText: 'For Eg : How do you think it will entertain your friends too  ?',
+                        hintText:
+                            'For Eg : How do you think it will entertain your friends too  ?',
 
                         validator: (desc) {
-                          if (desc.isEmpty || desc == "" || desc.length > 151 || desc.length < 20) {
+                          if (desc.isEmpty ||
+                              desc == "" ||
+                              desc.length > 151 ||
+                              desc.length < 20) {
                             print(desc.length);
                             print(linkController.text.length);
                             return "Keep it atleast 20 to 150 characters for better understanding !";
@@ -117,7 +133,8 @@ class _NewPostState extends State<NewPost> {
                       ),
                       SpaceH20(),
                       CustomTextFormField(
-                        hintText: 'A platform like Netfix , Prime or simply Google !',
+                        hintText:
+                            'A platform like Netfix , Prime or simply Google !',
                         autofocus: false,
                         controller: linkController,
                         validator: (link) {
@@ -170,7 +187,8 @@ class _NewPostState extends State<NewPost> {
                       SpaceH12(),
                       Container(
                         width: Sizes.WIDTH_200,
-                        decoration: Decorations.customBoxDecoration(blurRadius: 10),
+                        decoration:
+                            Decorations.customBoxDecoration(blurRadius: 10),
                         child: CustomButton(
                           hasIcon: true,
                           icon: Icon(
@@ -190,7 +208,12 @@ class _NewPostState extends State<NewPost> {
                               setState(() {
                                 isLoading = true;
                               });
-                              await db.createNewPost(uid, Post().toMap(_val, _desc, _links, options[tag])).then((status) {
+                              await db
+                                  .createNewPost(
+                                      uid,
+                                      Post().toMap(
+                                          _val, _desc, _links, options[tag]))
+                                  .then((status) {
                                 setState(() {
                                   isLoading = false;
                                   ssupController.clear();
@@ -198,8 +221,10 @@ class _NewPostState extends State<NewPost> {
                                   linkController.clear();
                                 });
                                 _scaffoldKey.currentState.showSnackBar(SnackBar(
-                                  content: Text('Awesome 😘 , that was a great idea and now your friends can see it on their feeds !'),
+                                  content: Text(
+                                      'Awesome 😘 , that was a great idea and now your friends can see it on their feeds !'),
                                 ));
+                                Navigator.pushNamed(context, '/home');
                               }).catchError((errorMsg) {
                                 setState(() {
                                   isLoading = false;
